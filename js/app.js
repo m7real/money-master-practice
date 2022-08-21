@@ -34,6 +34,7 @@ document.getElementById("btn-calc").addEventListener("click", function () {
   if (inputValidation()) {
     return;
   }
+  // if there is an error the input fields won't be clear to give an option to the user for editing his value
   const income = getFieldValueById("income");
   const foodExpense = getFieldValueById("food");
   const rentExpense = getFieldValueById("rent");
