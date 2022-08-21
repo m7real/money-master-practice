@@ -53,8 +53,11 @@ document.getElementById("btn-calc").addEventListener("click", function () {
 
 document.getElementById("btn-save").addEventListener("click", function () {
   const savingRate = getFieldValueById("save-field");
-  if (isNaN(savingRate) || savingRate === "" || savingRate < 0 || savingRate > 100) {
-    alert("Invalid Save Percentage");
+  if (isNaN(savingRate) || savingRate === "" || savingRate < 0) {
+    alert("Invalid Input");
+    return;
+  } else if (savingRate > 100) {
+    alert("You Can not Save More Than Your Balance");
     return;
   }
   const currentBalance = getTextElimentValueById("balance");
